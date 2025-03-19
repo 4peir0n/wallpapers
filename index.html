@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="images.js"></script>
+    <title>My Wallpapers Collection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #1a1a1a;
+            --accent1: #cd853f;
+            --accent2: #deb887;
+            --accent3: #8b4513;
+            --text: #f5f5dc;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 5px var(--accent3); }
+            50% { box-shadow: 0 0 15px var(--accent1); }
+            100% { box-shadow: 0 0 5px var(--accent3); }
+        }
+
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 5px var(--accent3); }
+            50% { text-shadow: 0 0 10px var(--accent1); }
+            100% { text-shadow: 0 0 5px var(--accent3); }
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, 
+                #0a0a0a, #1a1a1a, #2a2a2a, #1a1a1a, #0a0a0a);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            color: var(--text);
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        header {
+            background: rgba(10, 10, 10, 0.95);
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--accent1);
+            animation: fadeIn 1s ease-out;
+        }
+
+        header h1 {
+            background: linear-gradient(45deg, var(--accent1), var(--accent3));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: textGlow 8s infinite;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            background: rgba(15, 15, 15, 0.95);
+            border-radius: 10px;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-out backwards;
+            border: 1px solid var(--accent3);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            animation: glow 3s infinite;
+            border-color: var(--accent1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item-info {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 10, 10, 0.98);
+            border-top: 1px solid var(--accent3);
+        }
+
+        .gallery-item-title {
+            background: linear-gradient(45deg, var(--accent1), var(--accent3));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .download-icon {
+            color: var(--accent2);
+            transition: all 0.3s;
+        }
+
+        .gallery-item:hover .download-icon {
+            transform: scale(1.2);
+            color: var(--accent1);
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .pagination a {
+            padding: 10px 20px;
+            background: rgba(10, 10, 10, 0.95);
+            color: var(--text);
+            text-decoration: none;
+            border-radius: 5px;
+            border: 1px solid var(--accent1);
+            transition: all 0.3s;
+        }
+
+        .pagination a:hover,
+        .pagination a.active {
+            background: linear-gradient(45deg, var(--accent1), var(--accent3));
+            color: var(--bg-color);
+            font-weight: bold;
+            animation: glow 3s infinite;
+        }
+        
+        .pagination-ellipsis {
+            color: var(--accent2);
+            margin: 0 5px;
+            font-size: 1.2rem;
+            animation: textGlow 3s infinite;
+        }
+
+        footer {
+            background: rgba(10, 10, 10, 0.95);
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid var(--accent1);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: var(--accent3);
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-5px);
+            color: var(--accent1);
+            animation: textGlow 3s infinite;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My wallpapers</h1>
+    </header>
+
+    <div class="gallery">
+        <!-- Dynamic content -->
+    </div>
+
+    <div class="pagination">
+        <a href="/" class="active">1</a>
+        <a href="/2">2</a>
+        <a href="/3">3</a>
+        <a href="/4">4</a>
+        <a href="/5">5</a>
+        <a href="/6">6</a>
+        <a href="/7">7</a>
+        <a href="/8">8</a>
+        <a href="/9">9</a>
+        <a href="/10">10</a>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/4peir0n" target="_blank" rel="noopener noreferrer" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://twitter.com/whoisYoges" target="_blank" rel="noopener noreferrer" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer" title="Website">
+                <i class="fas fa-globe"></i>
+            </a>
+        </div>
+        <p>&copy; 2024Wallpapers Collection. By 4peir0n </p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const gallery = document.querySelector('.gallery');
+            const imageDirectory = 'images/'; // Directorio donde están tus imágenes
+            const imagesPerPage = 12; // Número de imágenes por página
+            
+            // Obtener la página actual de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            let currentPage = parseInt(urlParams.get('page')) || 1;
+            
+            // Calcular el total de páginas
+            const totalPages = Math.ceil(images.length / imagesPerPage);
+            
+            // Asegurarse de que la página actual es válida
+            if (currentPage < 1) currentPage = 1;
+            if (currentPage > totalPages) currentPage = totalPages;
+            
+            // Calcular el rango de imágenes para la página actual
+            const startIndex = (currentPage - 1) * imagesPerPage;
+            const endIndex = Math.min(startIndex + imagesPerPage, images.length);
+            
+            // Limpiar la galería
+            gallery.innerHTML = '';
+            
+            // Mostrar las imágenes de la página actual
+            for (let i = startIndex; i < endIndex; i++) {
+                const div = document.createElement('div');
+                div.className = 'gallery-item';
+                
+                const imageFile = images[i];
+                const imageNumber = i + 1;
+                
+                div.innerHTML = `
+                    <a href="${imageDirectory}${imageFile}" target="_blank">
+                        <img src="${imageDirectory}${imageFile}" alt="Wallpaper ${imageNumber}" loading="lazy">
+                        <div class="gallery-item-info">
+                            <span class="gallery-item-title">${imageNumber}</span>
+                            <i class="fas fa-download download-icon"></i>
+                        </div>
+                    </a>
+                `;
+                
+                div.style.animationDelay = `${(i - startIndex) * 0.05}s`;
+                gallery.appendChild(div);
+            }
+            
+            // Actualizar la paginación
+            const pagination = document.querySelector('.pagination');
+            pagination.innerHTML = '';
+            
+            // Añadir enlace a la primera página
+            if (currentPage > 2) {
+                const firstLink = document.createElement('a');
+                firstLink.href = '?page=1';
+                firstLink.textContent = '1';
+                pagination.appendChild(firstLink);
+                
+                if (currentPage > 3) {
+                    const ellipsis = document.createElement('span');
+                    ellipsis.textContent = '...';
+                    ellipsis.className = 'pagination-ellipsis';
+                    pagination.appendChild(ellipsis);
+                }
+            }
+            
+            // Añadir enlaces a las páginas cercanas
+            for (let i = Math.max(1, currentPage - 1); i <= Math.min(totalPages, currentPage + 1); i++) {
+                const pageLink = document.createElement('a');
+                pageLink.href = `?page=${i}`;
+                pageLink.textContent = i.toString();
+                if (i === currentPage) {
+                    pageLink.className = 'active';
+                }
+                pagination.appendChild(pageLink);
+            }
+            
+            // Añadir enlace a la última página
+            if (currentPage < totalPages - 1) {
+                if (currentPage < totalPages - 2) {
+                    const ellipsis = document.createElement('span');
+                    ellipsis.textContent = '...';
+                    ellipsis.className = 'pagination-ellipsis';
+                    pagination.appendChild(ellipsis);
+                }
+                
+                const lastLink = document.createElement('a');
+                lastLink.href = `?page=${totalPages}`;
+                lastLink.textContent = totalPages.toString();
+                pagination.appendChild(lastLink);
+            }
+        });
+    </script>
+</body>
+</html>
