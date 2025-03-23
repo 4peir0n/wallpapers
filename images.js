@@ -4,4 +4,8 @@ const images = [
     "fondo3.png",
     "zoro.jpg",
     "image4.jpg"
+    "edge-runner.jpg"
+    "wallpaper.png"
+    "purple.png"
+    "rebecca.png"
 ];
