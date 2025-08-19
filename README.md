@@ -1,16 +1,16 @@
-                                                            
-. . .     |    |                                           |
-| | |,---.|    |    ,---.,---.,---.,---.,---.,---.    o,---|
-| | |,---||    |    |   |,---||   ||---'|    `---.     |   |
-`-'-'`---^`---'`---'|---'`---^|---'`---'`    `---'    o`---'
-                    |         |                             
+# 📸 Wallpapers Collection
 
-##------------------------------------------------------------------
-Este repositorio contiene una cuidada selección de imágenes que he recopilado para usar como fondos de pantalla. Todas las imágenes están disponibles para que cualquiera las use libremente, ya sea como wallpaper o para cualquier otro propósito.
+. . . | | |
+| | |,---.| | ,---.,---.,---.,---.,---.,---. o,---|
+| | |,---|| | | |,---|| ||---'| ---. | | -'-'---^---'---'|---'---^|---'---' ---' o---'
+| |
 
-1. Visita la [página web](https://4peir0n.github.io/wallpapers)
 
-Siéntete libre de usar estas imágenes como más te parezca. ¡Disfrútalas! 
+## 🌌 Acerca del repositorio
+Este repositorio contiene una selección personal de **fondos de pantalla**.  
+Puedes usarlos libremente como wallpapers o para cualquier otro propósito.  
 
----
-*Creado por 4peir0n*
+🔗 [Visita la galería aquí](https://4peir0n.github.io/wallpapers)
+
+
+Creado con ❤️ por [4peir0n](https://github.com/4peir0n)
