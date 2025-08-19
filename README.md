@@ -6,7 +6,7 @@
 | | |,---||    |    |   |,---||   ||---'|    `---.     |   |
 `-'-'`---^`---'`---'|---'`---^|---'`---'`    `---'    o`---'
                     |         |                             
-
+```
 
 ## 🌌 Acerca del repositorio
 Este repositorio contiene una selección personal de **fondos de pantalla**.  
