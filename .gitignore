@@ -1,0 +1,20 @@
+# secretos y credenciales — nunca subir
+.env
+*.env
+.env.*
+secrets.json
+credentials.json
+*.pem
+*.key
+
+# archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+
+# logs y temporales
+*.log
+*.tmp
+__pycache__/
+*.pyc

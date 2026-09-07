@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0b0b">
+<meta name="description" content="Fondos de pantalla en alta resolución, selección personal de 4peir0n.">
+<title>4peir0n · wallpapers</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">
+    <span class="mark"></span>
+    <span class="brand-name">4PEIR0N<span class="dot">.</span></span>
+    <span class="brand-sub">wallpapers</span>
+  </div>
+  <div class="top-right">
+    <div class="search-wrap">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
+      <input id="search" type="search" placeholder="Buscar…" autocomplete="off" spellcheck="false">
+    </div>
+    <span class="count" id="count">—</span>
+  </div>
+</div>
+
+<header class="hero">
+  <p class="kicker">selección personal · 4K</p>
+  <h1>Fondos<span class="dot">.</span></h1>
+  <p class="lede" id="lede">En alta resolución para tu pantalla. Haz clic para verlos a tamaño completo.</p>
+</header>
+
+<main>
+  <div id="gallery"></div>
+  <div id="sentinel"></div>
+  <button id="load-more" hidden>Mostrar más</button>
+  <div id="empty" hidden>Sin resultados para esa búsqueda.</div>
+</main>
+
+<footer>
+  <span>By · 4peir0n</span>
+  <span class="right">4K · selección personal</span>
+</footer>
+
+<div id="lightbox" class="lb-screen" hidden>
+  <span class="lb-count" id="lb-count"></span>
+  <button class="lb-btn close" id="lb-close" aria-label="Cerrar">
+    <svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"></line><line x1="18" y1="6" x2="6" y2="18"></line></svg>
+  </button>
+  <button class="lb-btn nav prev" id="lb-prev" aria-label="Anterior">
+    <svg viewBox="0 0 24 24"><polyline points="15 4 7 12 15 20"></polyline></svg>
+  </button>
+  <button class="lb-btn nav next" id="lb-next" aria-label="Siguiente">
+    <svg viewBox="0 0 24 24"><polyline points="9 4 17 12 9 20"></polyline></svg>
+  </button>
+  <a class="lb-btn down" id="lb-download" download aria-label="Descargar">
+    <svg viewBox="0 0 24 24"><line x1="12" y1="4" x2="12" y2="15"></line><polyline points="6 10 12 16 18 10"></polyline><line x1="5" y1="20" x2="19" y2="20"></line></svg>
+  </a>
+  <div class="lb-stage"><img id="lb-img" alt=""><span class="lb-name" id="lb-name"></span></div>
+</div>
+
+<script src="list.js"></script>
+<script src="images.js"></script>
+</body>
+</html>
